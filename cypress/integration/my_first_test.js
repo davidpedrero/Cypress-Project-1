@@ -17,5 +17,3 @@ it.only("login test", function() {
   cy.get('#btnLogin').click();
 
 })
-
-// https://www.youtube.com/watch?v=vZamodE6hrs&list=PLhW3qG5bs-L9LTfxZ5LEBiM1WFfvX3dJo&index=8 
