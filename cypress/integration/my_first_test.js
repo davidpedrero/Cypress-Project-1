@@ -15,7 +15,8 @@ it.only("login test", function() {
   cy.get('#txtUsername').type("Admin")
   cy.get('#txtPassword').type("admin123")
   cy.get('#btnLogin').click();
+  cy.get('#menu_admin_viewAdminModule > b').click();
+  cy.get('#btnAdd').click();
+  cy.get('fieldset > p').find("#btnSave").click();
 
 })
-
-https://github.com/davidpedrero/Cypress-Project-1.git
