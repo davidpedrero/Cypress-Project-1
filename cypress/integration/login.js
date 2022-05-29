@@ -1,11 +1,19 @@
+import { LoginPage } from "../pages/login-page"
+import {LoginPage} from "../pages/login-pages"
+
+const loginPage = new LoginPage()
+
 
 it("login test", function() {
-    cy.visit("https://trytestingthis.netlify.app/index.html"), {
-        "Accept": "application/json, text/plain, */*",
-        "User-Agent": "axios/0.18.0"
-    }
-    cy.get('#uname').type("test")
-    cy.get('#pwd').type("test")
-    cy.get('[type="submit"]').click()
+
+    loginPage.navigate();
+    loginPage.enterUsername();
+    loginPage.enterPassword();
+    loginPage.clickLogin();
+
+    // cy.visit("https://trytestingthis.netlify.app/index.html")
+    // cy.get('#uname').type("test")
+    // cy.get('#pwd').type("test")
+    // cy.get('[type="submit"]').click()
 })
 
