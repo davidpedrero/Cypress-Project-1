@@ -1,5 +1,4 @@
-import { LoginPage } from "../pages/login-page"
-import {LoginPage} from "../pages/login-pages"
+import {LoginPage} from "../pages/login-page"
 
 const loginPage = new LoginPage()
 
