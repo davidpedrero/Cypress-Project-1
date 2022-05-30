@@ -5,14 +5,11 @@ const loginPage = new LoginPage()
 
 it("login test", function() {
 
-    loginPage.navigate();
-    loginPage.enterUsername();
-    loginPage.enterPassword();
+    loginPage.navigate("https://trytestingthis.netlify.app/index.html");
+    loginPage.enterUsername("test");
+    loginPage.enterPassword("test");
     loginPage.clickLogin();
 
-    // cy.visit("https://trytestingthis.netlify.app/index.html")
-    // cy.get('#uname').type("test")
-    // cy.get('#pwd').type("test")
-    // cy.get('[type="submit"]').click()
 })
 
+// https://www.youtube.com/watch?v=J9AHVKNDkDU&list=PLhW3qG5bs-L9LTfxZ5LEBiM1WFfvX3dJo&index=11

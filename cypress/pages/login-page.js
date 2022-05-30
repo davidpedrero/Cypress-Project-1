@@ -1,20 +1,23 @@
 export class LoginPage {
 
-    navigate() {
-        cy.visit("https://trytestingthis.netlify.app/index.html")
+    loginPage_username = '#uname'
+    loginPage_password = '#pwd'
+    loginPage_loginButton = '[type="submit"]'
+
+    navigate(url) {
+        cy.visit(url)
     }
 
-    enterUsername() {
-        cy.get('#uname').type("test")
+    enterUsername(username) {
+        cy.get(this.loginPage_username).type(username)
     }
 
-    enterPassword() {
-        cy.get('#pwd').type("test")
+    enterPassword(password) {
+        cy.get(this.loginPage_password).type(password)
     }
     
     clickLogin() {
-        cy.get('[type="submit"]').click()
+        cy.get(this.loginPage_loginButton).click()
     }
-
 
 } 
